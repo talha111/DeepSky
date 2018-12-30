@@ -14,9 +14,9 @@
       <h1 class="project-name">Solar Irradiance forecasting with Deep Learning</h1>
       <h2 class="project-tagline">Project Page for our paper titled "A deep learning approach to solar-irradiance forecasting in sky-videos"</h2>
       <h2 class="project-tagline">Talha Ahmad Siddiqui, Samarth Bharadwaj, Shivkumar Kalyanaraman (2019)</h2>
-      <a href="https://drive.google.com/file/d/1fKMXoaWLJaR985eILwY1nfaxXB2x7x5Y/view?usp=sharing" class="btn">View Paper</a>
+      <a href="solar_forecast_wacv2019.pdf" class="btn">View Paper</a>
       <a href="#" class="btn">Code (releasing soon)</a>
-      <!-- <a href="#" class="btn">Download .tar.gz</a> -->
+      <a href="#" class="btn">Data (releasing soon)</a>
     </section>
 
     <section class="main-content">
