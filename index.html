@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>DeepSky</title>
+    <title>SolarIrradiance using DL</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link rel="stylesheet" href="css/normalize.css">
@@ -11,15 +11,49 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">DeepSky</h1>
-      <h2 class="project-tagline">A responsive theme for your project on GitHub Pages</h2>
-      <a href="#" class="btn">View on GitHub</a>
-      <a href="#" class="btn">Download .zip</a>
-      <a href="#" class="btn">Download .tar.gz</a>
+      <h1 class="project-name">Solar Irradiance forecasting with Deep Learning</h1>
+      <h2 class="project-tagline">Project Page for our paper titled "A deep learning approach to solar-irradiance forecasting in sky-videos"</h2>
+      <h2 class="project-tagline">Talha Ahmad Siddiqui, Samarth Bharadwaj, Shivkumar Kalyanaraman (2019)</h2>
+      <a href="https://drive.google.com/file/d/1fKMXoaWLJaR985eILwY1nfaxXB2x7x5Y/view?usp=sharing" class="btn">View Paper</a>
+      <a href="#" class="btn">Code (releasing soon)</a>
+      <!-- <a href="#" class="btn">Download .tar.gz</a> -->
     </section>
 
     <section class="main-content">
-      <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>. <a href="https://github.com">Links</a> should be blue with no underlines (unless hovered over).</p>
+      <p> Ahead-of-time forecasting of incident solar-irradiance on a panel is indicative of energy yield and is essential for efficient grid distribution and planning. Typical approaches are based on meteorological physics models whose parameters are tuned by coarse-grained radiometric tiles sensed from geo-satellites.
+      </p>
+
+
+      <p><center><img src="conceptDiagram.png" style="max-width:70%;"></center></p>
+
+      <p>
+      This research presents a deep learning approach to observe and estimate short-term weather effects from sky-videos obtained with upward facing wide-lensed cameras and directly forecast solar irradiance. Our approach utilizes dilating convolution filters to learn a full-sky representation at varying scales via joint-training aided by auxiliary weather parameters that are sensed simultaneously. Multiple LSTMs with soft attention then leverage the full-sky representation to forecast the total surface irradiance by estimating flow, density and illuminance of clouds. We showcase results on two datasets obtained from weather stations in North America that captured sky-videos with relatively inexpensive optical hardware. They contain over a million images that span for one and 12 years respectively. Our deep learning approach significantly reduces the mean absolute percentage error for both nowcasting and forecasting. The architecture is illustrated below.
+      </p>
+
+      <p><center><img src="proposedApproach.png" style="max-width:80%;"></center></p>
+
+      <p>
+        Here are two sample videos in the month of April from each of the two datasets obtained from two different locations in the United States. We chose these videos, as they illustrate the challenges of irradiance forecasting (torrential rainy days in early summer).
+      </p>
+
+      <p>
+        Corresponding to each frame, the interpolated mean of the <a href="https://arxiv.org/abs/1411.5752">hypercolomns</a> is plotted that is indicative of the focus of convolution filters. Further, the measured irradiance is plotted along with the nowcast prediction and ahead of time forecast (+1, +2, +3, & +4) hours. Specific observations are made on each video in the caption text.
+      </p>
+
+      <p><center><img src="Gif_Arizona.gif" style="max-width:60%;"></center></p>
+      <p><center><img src="videograph_Arizona.gif" style="max-width:60%;"></center></p>
+      
+      <p>
+        The Colorado video setup (TSI) consists of a sun tracker to protect the lens and equipment from direct exposure to the sun. Hence, the autofocus allows the camera to capture the clouds more clearly. We pick a challenging video from the dataset with large intra-day variations in solar irradiance. Notice, that the error in nowcasting is higher, when the sun tracker miss-fires.
+      </p>
+
+      <p><center><img src="Gif_Colorado.gif" style="max-width:60%;"></center></p>
+      <p><center><img src="videograph_Colorado.gif" style="max-width:60%;"></center></p>
+
+
+      
+
+      <!-- <p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>. <a href="https://github.com">Links</a> should be blue with no underlines (unless hovered over).</p>
 
       <p>There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs. There should be whitespace between paragraphs.</p>
 
@@ -297,9 +331,9 @@
       <p><a href="https://camo.githubusercontent.com/afe46418285497605cf4f6376b75f8c818658fb1/687474703a2f2f706c6163656b697474656e2e636f6d2f672f313230302f3830302f" target="_blank"><img src="https://camo.githubusercontent.com/afe46418285497605cf4f6376b75f8c818658fb1/687474703a2f2f706c6163656b697474656e2e636f6d2f672f313230302f3830302f" alt="" data-canonical-src="https://placekitten.com/g/1200/800/" style="max-width:100%;"></a></p>
 
       <pre><code>This is the final element on the page and there should be no margin below this.</code></pre>
-
+ -->
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/jasonlong/cayman-theme">Cayman</a> is maintained by <a href="https://github.com/jasonlong">jasonlong</a>.</span>
+        <span class="site-footer-owner"><a href="#">This page</a> is maintained by <a href="#">IBM</a>.</span>
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a>.</span>
       </footer>
 
